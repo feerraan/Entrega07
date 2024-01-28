@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Entrega07 : MonoBehaviour
 {
     [SerializeField] private string[] letras;
+
+   private int totalrandom = 0;
+   private int contadorcinco = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         Exercise01();
         Exercise02();
+        Exercise04();
     }
 
     // Update is called once per frame
@@ -46,5 +51,31 @@ public class Entrega07 : MonoBehaviour
     }
 
 
+    private void Exercise04()
+    {
+        
+
+        while (totalrandom <= 100)
+        {
+            int numrandom = Random.Range(1, 11);
+
+            totalrandom = totalrandom + numrandom;
+
+            Debug.Log(totalrandom);
+
+
+            if (numrandom == 5)
+            {
+                contadorcinco++;
+            }
+
+        }
+
+        Debug.Log("El número total de 5 es: " + contadorcinco);
+
 
     }
+
+
+
+}
