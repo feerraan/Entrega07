@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Entrega07 : MonoBehaviour
 {
+    [SerializeField] private string[] letras;
+
     // Start is called before the first frame update
     void Start()
     {
         Exercise01();
-       
+        Exercise02();
     }
 
     // Update is called once per frame
@@ -29,6 +31,20 @@ public class Entrega07 : MonoBehaviour
     }
 
 
+    private void Exercise02()
+    {
+        int count = 0;
+
+        foreach (string letra in letras)
+        {
+            if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u")
+            {
+                count++;
+            }
+        }
+        Debug.Log(count);
+    }
 
 
-}
+
+    }
