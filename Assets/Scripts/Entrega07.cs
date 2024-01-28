@@ -10,12 +10,15 @@ public class Entrega07 : MonoBehaviour
    private int totalrandom = 0;
    private int contadorcinco = 0;
 
+    [SerializeField] private string frase;
+
     // Start is called before the first frame update
     void Start()
     {
         Exercise01();
         Exercise02();
         Exercise04();
+        Exercise05();
     }
 
     // Update is called once per frame
@@ -77,5 +80,27 @@ public class Entrega07 : MonoBehaviour
     }
 
 
+    private void Exercise05()
+    {
+
+        for (int i = 0; i < frase.Length; i++)
+        {
+
+            if (frase[i] == 'a')
+            {
+                i = frase.Length;
+            }
+            else
+            {
+                Debug.Log(frase[i]);
+            }
+
+        }
+
+    }
 
 }
+
+
+
+
